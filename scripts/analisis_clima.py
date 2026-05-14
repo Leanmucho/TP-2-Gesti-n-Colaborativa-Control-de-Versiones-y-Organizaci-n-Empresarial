@@ -38,11 +38,11 @@ def guardar_resumen_general(registros):
     total_precipitacion = sum(r["precipitacion"] for r in registros)
 
     resumen = [
-        ("Temperatura promedio", f"{promedio_temp:.2f} °C"),
-        ("Temperatura máxima", f"{temp_maxima:.2f} °C"),
-        ("Temperatura mínima", f"{temp_minima:.2f} °C"),
-        ("Promedio diario de precipitación", f"{promedio_precipitacion:.2f} mm"),
-        ("Precipitación total anual", f"{total_precipitacion:.2f} mm"),
+        ("Temperatura promedio", f"{promedio_temp:.2f} C"),
+        ("Temperatura maxima", f"{temp_maxima:.2f} C"),
+        ("Temperatura minima", f"{temp_minima:.2f} C"),
+        ("Promedio diario de precipitacion", f"{promedio_precipitacion:.2f} mm"),
+        ("Precipitacion total anual", f"{total_precipitacion:.2f} mm"),
     ]
 
     with (RESULTADOS / "resumen_clima.csv").open("w", encoding="utf-8", newline="") as archivo:
@@ -131,7 +131,7 @@ def generar_grafico_svg(resumen_mensual):
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{ancho}" height="{alto}" viewBox="0 0 {ancho} {alto}">
   <rect width="100%" height="100%" fill="#ffffff"/>
   <text x="{ancho / 2}" y="28" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#1d3f4f">Clima de Buenos Aires durante 2024</text>
-  <text x="{ancho / 2}" y="52" text-anchor="middle" font-family="Arial" font-size="13" fill="#555">Temperatura media mensual y precipitación acumulada</text>
+  <text x="{ancho / 2}" y="52" text-anchor="middle" font-family="Arial" font-size="13" fill="#555">Temperatura media mensual y precipitacion acumulada</text>
   <line x1="{margen_izq}" y1="{margen_sup + area_alto}" x2="{ancho - margen_der}" y2="{margen_sup + area_alto}" stroke="#444"/>
   <line x1="{margen_izq}" y1="{margen_sup}" x2="{margen_izq}" y2="{margen_sup + area_alto}" stroke="#444"/>
   {"".join(barras)}
@@ -140,7 +140,7 @@ def generar_grafico_svg(resumen_mensual):
   {"".join(etiquetas)}
   <text x="{margen_izq}" y="{alto - 12}" font-family="Arial" font-size="12" fill="#555">Meses de 2024</text>
   <text x="18" y="{margen_sup + 15}" font-family="Arial" font-size="12" fill="#d05a37" transform="rotate(-90 18,{margen_sup + 15})">Temperatura media</text>
-  <text x="{ancho - 230}" y="{margen_sup + 20}" font-family="Arial" font-size="13" fill="#333">Línea: temperatura media | Barras: precipitación</text>
+  <text x="{ancho - 230}" y="{margen_sup + 20}" font-family="Arial" font-size="13" fill="#333">Linea: temperatura media | Barras: precipitacion</text>
 </svg>'''
 
     (RESULTADOS / "grafico_temperatura_buenos_aires.svg").write_text(
@@ -168,7 +168,7 @@ def generar_grafico_png(resumen_mensual):
     dibujo = ImageDraw.Draw(imagen)
 
     dibujo.text((ancho // 2 - 150, 18), "Clima de Buenos Aires durante 2024", fill=(29, 63, 79))
-    dibujo.text((ancho // 2 - 190, 38), "Temperatura media mensual y precipitación acumulada", fill=(85, 85, 85))
+    dibujo.text((ancho // 2 - 190, 38), "Temperatura media mensual y precipitacion acumulada", fill=(85, 85, 85))
     dibujo.line((margen_izq, margen_sup + area_alto, ancho - margen_der, margen_sup + area_alto), fill=(68, 68, 68))
     dibujo.line((margen_izq, margen_sup, margen_izq, margen_sup + area_alto), fill=(68, 68, 68))
 
@@ -190,7 +190,7 @@ def generar_grafico_png(resumen_mensual):
     for x, y in puntos:
         dibujo.ellipse((x - 4, y - 4, x + 4, y + 4), fill=(208, 90, 55))
 
-    dibujo.text((ancho - 260, margen_sup + 10), "Línea: temperatura | Barras: lluvia", fill=(51, 51, 51))
+    dibujo.text((ancho - 260, margen_sup + 10), "Linea: temperatura | Barras: lluvia", fill=(51, 51, 51))
     imagen.save(RESULTADOS / "grafico_temperatura_buenos_aires.png")
 
 
@@ -202,7 +202,7 @@ def main():
     generar_grafico_svg(resumen_mensual)
     generar_grafico_png(resumen_mensual)
 
-    print("Análisis finalizado. Archivos generados en la carpeta resultados.")
+    print("Analisis finalizado. Archivos generados en la carpeta resultados.")
     for indicador, valor in resumen:
         print(f"- {indicador}: {valor}")
 

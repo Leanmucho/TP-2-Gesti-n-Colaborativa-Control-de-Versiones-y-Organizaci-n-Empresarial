@@ -1,10 +1,10 @@
-# TP Gestión Colaborativa, Control de Versiones y Organización Empresarial
+# TP Gestion Colaborativa, Control de Versiones y Organizacion Empresarial
 
-Trabajo práctico de Organización Empresarial realizado por Leandro Nicolas Acuña.
+Trabajo practico de Organizacion Empresarial realizado por Leandro Nicolas Acuna.
 
 ## Escenario elegido
 
-Elegí el escenario A, análisis de datos climáticos. La idea fue trabajar con un dataset público de Buenos Aires y generar indicadores simples de temperatura y precipitaciones.
+Elegi el escenario A, analisis de datos climaticos. La idea fue trabajar con un dataset publico de Buenos Aires y generar indicadores simples de temperatura y precipitaciones.
 
 ## Dataset usado
 
@@ -13,7 +13,7 @@ El archivo principal es `datos/clima_buenos_aires_2024.csv`.
 Fuente: Open-Meteo Historical Weather API  
 https://open-meteo.com/
 
-El dataset contiene registros diarios de temperatura media, temperatura máxima, temperatura mínima y precipitaciones para Buenos Aires durante 2024.
+El dataset contiene registros diarios de temperatura media, temperatura maxima, temperatura minima y precipitaciones para Buenos Aires durante 2024.
 
 ## Estructura del repositorio
 
@@ -31,7 +31,7 @@ README.md
 .gitignore
 ```
 
-## Cómo ejecutar el proyecto
+## Como ejecutar el proyecto
 
 Desde Google Colab o desde una terminal con Python:
 
@@ -43,34 +43,34 @@ El script lee el CSV desde `datos/`, calcula indicadores generales y guarda los 
 
 ## Resultados esperados
 
-El análisis genera:
+El analisis genera:
 
-- un resumen de indicadores climáticos;
+- un resumen de indicadores climaticos;
 - una tabla mensual con temperatura y precipitaciones;
-- un gráfico de evolución del clima en Buenos Aires.
+- un grafico de evolucion del clima en Buenos Aires.
 
 ## Trabajo con Jira y GitHub
 
-Como el trabajo lo realicé de forma individual, asumí los tres roles pedidos en la consigna:
+Como el trabajo lo realice de forma individual, asumi los tres roles pedidos en la consigna:
 
-- P1: organización del repositorio, carpetas y README.
-- P2: desarrollo del script de análisis en Python.
-- P3: revisión, seguridad, documentación y control final.
+- P1: organizacion del repositorio, carpetas y README.
+- P2: desarrollo del script de analisis en Python.
+- P3: revision, seguridad, documentacion y control final.
 
-Los commits deben respetar el formato indicado por la cátedra:
+Los commits deben respetar el formato indicado por la catedra:
 
 ```text
-ID-JIRA: descripción del cambio
+ID-JIRA: descripcion del cambio
 ```
 
 Ejemplo:
 
 ```text
 TP2-1: crear estructura inicial del repositorio
-TP2-2: agregar script de análisis climático
-TP2-3: documentar resultados y buenas prácticas
+TP2-2: agregar script de analisis climatico
+TP2-3: documentar resultados y buenas practicas
 ```
 
 ## Seguridad
 
-No se suben tokens ni claves al repositorio. El Personal Access Token de GitHub se usa solo para autenticar el push desde Colab y no debe quedar escrito en celdas públicas.
+No se suben tokens ni claves al repositorio. El Personal Access Token de GitHub se usa solo para autenticar el push desde Colab y no debe quedar escrito en celdas publicas.
