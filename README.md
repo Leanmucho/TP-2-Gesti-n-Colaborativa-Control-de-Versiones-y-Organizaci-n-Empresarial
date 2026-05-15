@@ -63,12 +63,14 @@ Los commits deben respetar el formato indicado por la catedra:
 ID-JIRA: descripcion del cambio
 ```
 
-Ejemplo:
+Historial de commits del proyecto:
 
 ```text
 TP2-1: crear estructura inicial del repositorio
-TP2-2: agregar script de analisis climatico
-TP2-3: documentar resultados y buenas practicas
+TP2-2: agregar analisis climatico en Python
+TP2-3: documentar informe final y buenas practicas
+TP2-4: agregar notebook de Colab y corregir codificacion
+TP2-5: quitar acentos para evitar errores de codificacion
 ```
 
 ## Seguridad
