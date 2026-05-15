@@ -1,10 +1,10 @@
 # TP Gestion Colaborativa, Control de Versiones y Organizacion Empresarial
 
-Trabajo practico de Organizacion Empresarial realizado por Leandro Nicolas Acuña.
+Trabajo practico de Organizacion Empresarial realizado por Leandro Nicolas Acuna.
 
 ## Escenario elegido
 
-Elegí el escenario A, analisis de datos climaticos. La idea fue trabajar con un dataset publico de Buenos Aires y generar indicadores simples de temperatura y precipitaciones.
+Elegi el escenario A, analisis de datos climaticos. La idea fue trabajar con un dataset publico de Buenos Aires y generar indicadores simples de temperatura y precipitaciones.
 
 ## Dataset usado
 
@@ -13,7 +13,7 @@ El archivo principal es `datos/clima_buenos_aires_2024.csv`.
 Fuente: Open-Meteo Historical Weather API  
 https://open-meteo.com/
 
-El dataset contiene registros diarios de temperatura media, temperatura maxima, temperatura minima y preciptaciones para Buenos Aires durante 2024.
+El dataset contiene registros diarios de temperatura media, temperatura maxima, temperatura minima y precipitaciones para Buenos Aires durante 2024.
 
 ## Estructura del repositorio
 
@@ -39,19 +39,19 @@ Desde Google Colab o desde una terminal con Python:
 python scripts/analisis_clima.py
 ```
 
-El script lee el CSV desde `datos/`, calcula indicadore generales y guarda los resultados en `resultados/`.
+El script lee el CSV desde `datos/`, calcula indicadores generales y guarda los resultados en `resultados/`.
 
 ## Resultados esperados
 
 El analisis genera:
 
 - un resumen de indicadores climaticos;
-- una tabla anual con el promedio de anomalia;
-- un grafico de evolucion de la temperatura global.
+- una tabla mensual con temperatura y precipitaciones;
+- un grafico de evolucion del clima en Buenos Aires.
 
 ## Trabajo con Jira y GitHub
 
-Como el trabajo lo realicé de forma individual, asumí los tres roles pedidos en la consigna:
+Como el trabajo lo realice de forma individual, asumi los tres roles pedidos en la consigna:
 
 - P1: organizacion del repositorio, carpetas y README.
 - P2: desarrollo del script de analisis en Python.
@@ -63,12 +63,14 @@ Los commits deben respetar el formato indicado por la catedra:
 ID-JIRA: descripcion del cambio
 ```
 
-Ejemplo:
+Historial de commits del proyecto:
 
 ```text
 TP2-1: crear estructura inicial del repositorio
-TP2-2: agregar script de analisis climatico
-TP2-3: documentar resultados y buenas practicas
+TP2-2: agregar analisis climatico en Python
+TP2-3: documentar informe final y buenas practicas
+TP2-4: agregar notebook de Colab y corregir codificacion
+TP2-5: quitar acentos para evitar errores de codificacion
 ```
 
 ## Seguridad
